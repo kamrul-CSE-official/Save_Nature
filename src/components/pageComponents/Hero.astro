@@ -1,0 +1,53 @@
+---
+// import heroImage from "/assets/hero (1).jpg";
+---
+
+<div
+  class="relative h-screen bg-cover bg-center"
+  style={`background-image: url('/assets/hero (1).jpg')`}
+>
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div
+    class="relative container mx-auto px-4 h-full flex flex-col justify-center"
+  >
+    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 max-w-2xl">
+      Save the environment today for a better tomorrow
+    </h1>
+    <div class="flex space-x-4 mb-12">
+      <button
+        class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8"
+      >
+        What we do
+      </button>
+      <button
+        class="border border-white text-white hover:bg-white hover:text-black inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="mr-2 h-4 w-4"
+        >
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        Play Video
+      </button>
+    </div>
+    <div class="flex justify-between text-white pt-10">
+      <div>
+        <p class="text-3xl font-bold">23,800</p>
+        <p>trees planted</p>
+      </div>
+      <div>
+        <p class="text-3xl font-bold">5840</p>
+        <p>donations collected</p>
+      </div>
+    </div>
+  </div>
+</div>
