@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  className?: string;
+}
+
+const { title, className } = Astro.props;
+
+const anim = {
+  old: {
+    name: "bump",
+    duration: "0.5s",
+    easing: "ease-in",
+    direction: "reverse",
+  },
+  new: {
+    name: "bump",
+    duration: "0.5s",
+    easing: "ease-in-out",
+  },
+};
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+};
+---
+
+<div>
+  <h1
+    transition:animate={customTransition}
+    class={`${className ? className : "text-4xl md:text-6xl font-bold mb-6 max-w-2xl"}`}
+  >
+    {title}
+  </h1>
+</div>

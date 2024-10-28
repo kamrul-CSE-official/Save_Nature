@@ -14,6 +14,8 @@ const navItems: INavItem[] = [
   { href: "/media", label: "Media" },
   { href: "/contact", label: "Contact" },
 ];
+
+const pathName: string = Astro.url.pathname;
 ---
 
 <nav
@@ -28,7 +30,10 @@ const navItems: INavItem[] = [
       <div class="hidden md:flex space-x-4">
         {
           navItems.map(({ href, label }) => (
-            <a href={href} class="text-gray-600 hover:text-gray-800">
+            <a
+              href={href}
+              class={`"text-gray-600 hover:text-gray-800" ${pathName === href ? "border-b-4 border-green-500" : ""}`}
+            >
               {label}
             </a>
           ))

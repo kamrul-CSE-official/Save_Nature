@@ -3,6 +3,7 @@ import Navbar from "@/components/share/Navbar.astro";
 import Footer from "@/components/share/Footer.astro";
 import "@/styles/globals.css";
 import ScrollToTop from "@/components/share/ScrollToTop.astro";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -20,6 +21,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Save Nature | {title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Navbar />
@@ -56,3 +58,20 @@ const { title } = Astro.props;
       monospace;
   }
 </style> -->
+
+<style is:global>
+  @keyframes bump {
+    0% {
+      opacity: 0;
+      transform: scale(1) translateX(200px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
+  }
+</style>
